@@ -72,7 +72,7 @@ function Calculator(){
     setTotalEarned(currentTotalEarned);
   }
 
-  const paymentsTotal = parseFloat(additionalPayments.current.value) * parseFloat(months.current.value)
+  const paymentsTotal = parseFloat(additionalPayments.current?.value || 0) * parseFloat(months.current?.value || 0)
   return (
     <div >
         Начальная сумма: <input ref={startAmount} type="number" min={1} placeholder={`10${VALUE_SYMBOL}`}/>
